@@ -23,3 +23,14 @@ for x in {0..8}; do
     echo
   done
 done
+
+if test -t 1; then
+    # Wyjście standardowe (konsola), ustaw kolory
+    GREEN='\e[32m'
+    RED='\e[31m'
+    BOLD='\e[1m'
+    NO_COLOR='\e[0m'
+else
+    # Wyjście jest do pliku, nie potrzebujemy kolorów
+    GREEN="";RED="";BOLD="";NOCOLOR=""
+fi
